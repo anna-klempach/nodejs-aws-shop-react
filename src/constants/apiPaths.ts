@@ -1,4 +1,4 @@
-const BASE_URL = "https://hzrr35n5la.execute-api.us-east-1.amazonaws.com/prod";
+const BASE_URL = "https://v75i02chr4.execute-api.us-east-1.amazonaws.com/prod";
 
 const API_PATHS = {
   products: `${BASE_URL}/products`,

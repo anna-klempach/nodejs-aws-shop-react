@@ -6,17 +6,17 @@ import * as origins from "aws-cdk-lib/aws-cloudfront-origins";
 
 const app = new cdk.App();
 
-const stack = new cdk.Stack(app, "HKReactShopStack", {
+const stack = new cdk.Stack(app, "HKLReactShopStack", {
   env: { region: "us-east-1" },
 });
 
-const bucket = new s3.Bucket(stack, "HKReactShopBucket", {
-  bucketName: "hk-react-shop",
+const bucket = new s3.Bucket(stack, "HKLReactShopBucket", {
+  bucketName: "hkl-react-shop",
 });
 
 const originAccessIdentity = new cf.OriginAccessIdentity(
   stack,
-  "HKReactShopBucketOAI",
+  "HKLReactShopBucketOAI",
   {
     comment: bucket.bucketName,
   }
@@ -24,7 +24,7 @@ const originAccessIdentity = new cf.OriginAccessIdentity(
 
 bucket.grantRead(originAccessIdentity);
 
-const cloudFront = new cf.Distribution(stack, "HKReactShopDistribution", {
+const cloudFront = new cf.Distribution(stack, "HKLReactShopDistribution", {
   defaultBehavior: {
     origin: new origins.S3Origin(bucket, {
       originAccessIdentity,
@@ -41,7 +41,7 @@ const cloudFront = new cf.Distribution(stack, "HKReactShopDistribution", {
   ],
 });
 
-new deployment.BucketDeployment(stack, "HKReactShopDeployment", {
+new deployment.BucketDeployment(stack, "HKLReactShopDeployment", {
   destinationBucket: bucket,
   sources: [deployment.Source.asset("./dist")],
   distribution: cloudFront,
