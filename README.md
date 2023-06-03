@@ -36,3 +36,27 @@ Runs tests in console, in browser or with coverage.
 ### `lint`, `prettier`
 
 Runs linting and formatting for all files in `src` folder.
+
+### `cdk:bootstrap`
+
+Bootsraps cdk.
+
+### `cloudfront:setup`
+
+Sets CloudFront stack.
+
+### `cloudfront:destroy`
+
+Destroys CloudFront stack.
+
+### `cloudfront:deploy`
+
+Builds the project and updates CloudFront stack. Invalidation done automatically.
+
+## CloudFront URL
+
+[https://d3aeyiha7mgerx.cloudfront.net/](https://d3aeyiha7mgerx.cloudfront.net/)
+
+## S3 URL (doesn't work)
+
+[https://hk-react-shop.s3.amazonaws.com/index.html](https://hk-react-shop.s3.amazonaws.com/index.html)

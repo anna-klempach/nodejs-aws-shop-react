@@ -1,0 +1,124 @@
+{
+  "version": "32.0.0",
+  "artifacts": {
+    "HKReactShopStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "HKReactShopStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "HKReactShopStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/us-east-1",
+      "properties": {
+        "templateFile": "HKReactShopStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-us-east-1/162711b6f7f7a50aea56a45468eb074db8d87dcd6d77052916b2720eac213840.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "HKReactShopStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "HKReactShopStack.assets"
+      ],
+      "metadata": {
+        "/HKReactShopStack/HKReactShopBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HKReactShopBucketBAB6F765"
+          }
+        ],
+        "/HKReactShopStack/HKReactShopBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HKReactShopBucketPolicyC6C9F5DD"
+          }
+        ],
+        "/HKReactShopStack/HKReactShopBucketOAI/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HKReactShopBucketOAIF23C45BD"
+          }
+        ],
+        "/HKReactShopStack/HKReactShopDistribution/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HKReactShopDistribution6C2E27B0"
+          }
+        ],
+        "/HKReactShopStack/HKReactShopDeployment/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HKReactShopDeploymentAwsCliLayerD66DE220"
+          }
+        ],
+        "/HKReactShopStack/HKReactShopDeployment/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HKReactShopDeploymentCustomResource3AB24154"
+          }
+        ],
+        "/HKReactShopStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
+          }
+        ],
+        "/HKReactShopStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF"
+          }
+        ],
+        "/HKReactShopStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536"
+          }
+        ],
+        "/HKReactShopStack/Domain URL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DomainURL"
+          }
+        ],
+        "/HKReactShopStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/HKReactShopStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/HKReactShopStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "HKReactShopStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
