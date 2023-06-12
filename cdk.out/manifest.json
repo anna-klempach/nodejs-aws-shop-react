@@ -1,27 +1,27 @@
 {
   "version": "32.0.0",
   "artifacts": {
-    "HKReactShopStack.assets": {
+    "HKLReactShopStack.assets": {
       "type": "cdk:asset-manifest",
       "properties": {
-        "file": "HKReactShopStack.assets.json",
+        "file": "HKLReactShopStack.assets.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
       }
     },
-    "HKReactShopStack": {
+    "HKLReactShopStack": {
       "type": "aws:cloudformation:stack",
       "environment": "aws://unknown-account/us-east-1",
       "properties": {
-        "templateFile": "HKReactShopStack.template.json",
+        "templateFile": "HKLReactShopStack.template.json",
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-us-east-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-us-east-1/162711b6f7f7a50aea56a45468eb074db8d87dcd6d77052916b2720eac213840.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-us-east-1/ab92b04f93189be47722af88c0c44700273bdcd15128ccf1cbd050e98aa71483.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
-          "HKReactShopStack.assets"
+          "HKLReactShopStack.assets"
         ],
         "lookupRole": {
           "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-us-east-1",
@@ -30,89 +30,89 @@
         }
       },
       "dependencies": [
-        "HKReactShopStack.assets"
+        "HKLReactShopStack.assets"
       ],
       "metadata": {
-        "/HKReactShopStack/HKReactShopBucket/Resource": [
+        "/HKLReactShopStack/HKLReactShopBucket/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "HKReactShopBucketBAB6F765"
+            "data": "HKLReactShopBucketA0622567"
           }
         ],
-        "/HKReactShopStack/HKReactShopBucket/Policy/Resource": [
+        "/HKLReactShopStack/HKLReactShopBucket/Policy/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "HKReactShopBucketPolicyC6C9F5DD"
+            "data": "HKLReactShopBucketPolicyDF26AA39"
           }
         ],
-        "/HKReactShopStack/HKReactShopBucketOAI/Resource": [
+        "/HKLReactShopStack/HKLReactShopBucketOAI/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "HKReactShopBucketOAIF23C45BD"
+            "data": "HKLReactShopBucketOAIDD1CEFA4"
           }
         ],
-        "/HKReactShopStack/HKReactShopDistribution/Resource": [
+        "/HKLReactShopStack/HKLReactShopDistribution/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "HKReactShopDistribution6C2E27B0"
+            "data": "HKLReactShopDistribution4DA75E00"
           }
         ],
-        "/HKReactShopStack/HKReactShopDeployment/AwsCliLayer/Resource": [
+        "/HKLReactShopStack/HKLReactShopDeployment/AwsCliLayer/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "HKReactShopDeploymentAwsCliLayerD66DE220"
+            "data": "HKLReactShopDeploymentAwsCliLayer54A0A048"
           }
         ],
-        "/HKReactShopStack/HKReactShopDeployment/CustomResource/Default": [
+        "/HKLReactShopStack/HKLReactShopDeployment/CustomResource/Default": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "HKReactShopDeploymentCustomResource3AB24154"
+            "data": "HKLReactShopDeploymentCustomResourceD80DA737"
           }
         ],
-        "/HKReactShopStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
+        "/HKLReactShopStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
           }
         ],
-        "/HKReactShopStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
+        "/HKLReactShopStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF"
           }
         ],
-        "/HKReactShopStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
+        "/HKLReactShopStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536"
           }
         ],
-        "/HKReactShopStack/Domain URL": [
+        "/HKLReactShopStack/Domain URL": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DomainURL"
           }
         ],
-        "/HKReactShopStack/CDKMetadata/Default": [
+        "/HKLReactShopStack/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/HKReactShopStack/BootstrapVersion": [
+        "/HKLReactShopStack/BootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "BootstrapVersion"
           }
         ],
-        "/HKReactShopStack/CheckBootstrapVersion": [
+        "/HKLReactShopStack/CheckBootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CheckBootstrapVersion"
           }
         ]
       },
-      "displayName": "HKReactShopStack"
+      "displayName": "HKLReactShopStack"
     },
     "Tree": {
       "type": "cdk:tree",

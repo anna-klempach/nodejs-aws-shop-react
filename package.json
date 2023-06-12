@@ -12,8 +12,8 @@
     "lint": "eslint --ignore-path .gitignore --fix src",
     "prettier": "prettier src --write",
     "cdk:bootstrap": "npx cdk bootstrap",
-    "cloudfront:setup": "npx cdk deploy --profile Hanna",
-    "cloudfront:destroy": "npx cdk destroy --profile Hanna",
+    "cloudfront:setup": "npx cdk deploy --profile HKL",
+    "cloudfront:destroy": "npx cdk destroy --profile HKL",
     "cloudfront:deploy": "npm run build && npm run cloudfront:setup"
   },
   "dependencies": {
